@@ -1,6 +1,6 @@
 import React from 'react'
 import { SuperTitleProps } from './SuperTitle.props'
-import styles from './SuperTitle.module.css'
+import styles from './SuperTitle.module.scss'
 
 
 export const SuperTitle = React.memo(function SuperTitle({ children, tag  }: SuperTitleProps): JSX.Element {

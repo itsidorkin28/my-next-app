@@ -18,19 +18,39 @@
 .primary {
 	color: var(--white);
 	background-color: var(--primary);
-}
 
-.primary:hover {
-	background-color: var(--primary-hover);
+	&:hover {
+		background-color: var(--primary-hover);
+	}
+
 }
 
 .ghost {
 	color: var(--black);
 	border: 1px solid var(--gray-light);
 	background: none;
+
+	&:hover {
+		color: var(--white);
+		background-color: var(--primary);
+	}
+
+	&:hover svg {
+		fill: var(--white);
+	}
 }
 
-.ghost:hover {
-	color: var(--white);
-	background-color: var(--primary);
+.arrow {
+	display: inline-block;
+
+	margin-left: 10px;
+}
+
+.down {
+	transition: all 0.2s;
+	transform: rotate(90deg);
+}
+
+.primary svg {
+	fill: var(--white)
 }
