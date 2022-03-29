@@ -22,7 +22,10 @@
 	&:hover {
 		background-color: var(--primary-hover);
 	}
+}
 
+.primary svg {
+	fill: var(--white);
 }
 
 .ghost {
@@ -49,8 +52,4 @@
 .down {
 	transition: all 0.2s;
 	transform: rotate(90deg);
-}
-
-.primary svg {
-	fill: var(--white)
 }
