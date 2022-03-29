@@ -1,7 +1,11 @@
 import type { NextPage } from 'next'
-import { Paragraph, SuperButton, SuperTitle, Tag } from '../components'
+import { Paragraph, Rating, SuperButton, SuperTitle, Tag } from '../components'
+import { useState } from 'react'
+import { withLayout } from '../layout'
 
 const Home: NextPage = (): JSX.Element => {
+    const [rating, setRating] = useState<number>(4)
+
     return (
         <>
             <SuperTitle tag={'h1'}>Title</SuperTitle>
@@ -14,8 +18,9 @@ const Home: NextPage = (): JSX.Element => {
             <Tag size={'m'} color={'red'}>Red</Tag>
             <Tag size={'m'} color={'green'}>Green</Tag>
             <Tag size={'s'} color={'primary'}>Primary</Tag>
+            <Rating rating={rating} isEditable setRating={setRating}/>
         </>
     )
 }
 
-export default Home
+export default withLayout(Home)
