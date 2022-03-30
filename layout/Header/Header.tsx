@@ -4,9 +4,9 @@ import styles from './Header.module.scss'
 import cn from 'classnames'
 
 export const Header = ({ ...props }: HeaderProps): JSX.Element => {
-    return <>
+    return <div {...props}>
         Header
-    </>
+    </div>
 }
 
 

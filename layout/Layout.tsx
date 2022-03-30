@@ -1,20 +1,17 @@
 import React, { FunctionComponent } from 'react'
 import { LayoutProps } from './Layout.props'
 import styles from './Layout.module.scss'
-import cn from 'classnames'
 import { Footer, Header, Sidebar } from '.'
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
-    return <>
-        <Header />
-        <div>
-            <Sidebar />
-            <div>
-                {children}
-            </div>
+    return <div className={styles.wrapper}>
+        <Header className={styles.header} />
+        <Sidebar className={styles.sidebar} />
+        <div className={styles.body}>
+            {children}
         </div>
-        <Footer />
-    </>
+        <Footer className={styles.footer} />
+    </div>
 }
 
 export const withLayout = <T extends Record<string, unknown>>(Component: FunctionComponent<T>) => {
